@@ -1,0 +1,12 @@
+services:
+  web:
+    image: php:8.1-apache
+    ports:
+      - "8081:80"
+    volumes:
+      - .:/var/www/html
+  node:
+    image: node:19
+    volumes:
+      - .:/var/www/html
+    tty : true
